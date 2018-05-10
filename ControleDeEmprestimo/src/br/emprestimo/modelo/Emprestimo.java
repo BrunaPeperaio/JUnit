@@ -26,9 +26,13 @@ public class Emprestimo {
 	}
 
 	public void setUsuario(Usuario usuario) {
-		this.livro = livro;
+		if (usuario == null) {
+			throw new RuntimeException("Usuario inválido");
+		}
+		this.usuario = usuario;
 	}
 
+	
 	public String getDataEmprestimo() {
 		return dataEmprestimo;
 	}
